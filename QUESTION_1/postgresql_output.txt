@@ -1,0 +1,90 @@
+
+psql:/docker-entrypoint-initdb.d/masters.sql:14: NOTICE:  table "stores" does not exist, skipping
+
+DROP TABLE
+
+CREATE TABLE
+
+CREATE TABLE
+
+CREATE TABLE
+
+CREATE INDEX
+
+CREATE INDEX
+
+CREATE TABLE
+
+CREATE INDEX
+
+INSERT 0 12
+
+INSERT 0 14
+
+INSERT 0 1224
+
+INSERT 0 4320
+
+ANALYZE
+
+
+
+waiting for server to shut down...2026-09-18 07:38:26.606 UTC [48] LOG:  received fast shutdown request
+
+.2026-09-18 07:38:26.607 UTC [48] LOG:  aborting any active transactions
+
+2026-09-18 07:38:26.608 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+
+2026-09-18 07:38:26.608 UTC [49] LOG:  shutting down
+
+2026-09-18 07:38:26.609 UTC [49] LOG:  checkpoint starting: shutdown immediate
+
+2026-09-18 07:38:26.671 UTC [49] LOG:  checkpoint complete: wrote 1068 buffers (6.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.009 s, sync=0.043 s, total=0.063 s; sync files=321, longest=0.002 s, average=0.001 s; distance=6068 kB, estimate=6068 kB; lsn=0/1ADFDE0, redo lsn=0/1ADFDE0
+
+2026-09-18 07:38:26.673 UTC [48] LOG:  database system is shut down
+
+ done
+
+server stopped
+
+
+PostgreSQL init process complete; ready for start up.
+
+
+2026-09-18 07:38:26.718 UTC [1] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+
+2026-09-18 07:38:26.719 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+
+2026-09-18 07:38:26.719 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+
+2026-09-18 07:38:26.721 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+
+2026-09-18 07:38:26.724 UTC [66] LOG:  database system was shut down at 2026-09-18 07:38:26 UTC
+
+2026-09-18 07:38:26.726 UTC [1] LOG:  database system is ready to accept connections
+duckdb  
+
+┌──────────────┐
+
+│    status    │
+
+│   varchar    │
+
+├──────────────┤
+
+│ DuckDB ready │
+
+└──────────────┘
+postgres
+
+2026-09-18 07:43:26.809 UTC [64] LOG:  checkpoint starting: time
+
+2026-09-18 07:43:35.845 UTC [64] LOG:  checkpoint complete: wrote 93 buffers (0.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.027 s, sync=0.006 s, total=9.037 s; sync files=20, longest=0.004 s, average=0.001 s; distance=409 kB, estimate=409 kB; lsn=0/1B46610, redo lsn=0/1B465D8
+
+2026-09-18 09:54:03.970 UTC [13421] ERROR:  syntax error at or near "-" at character 4
+
+2026-09-18 09:54:03.970 UTC [13421] STATEMENT:  Set-Location 'C:\Users\ub02-glab-055\Downloads\data_2';
+
+2026-09-18 09:58:28.709 UTC [64] LOG:  checkpoint starting: time
+
+2026-09-18 09:59:41.166 UTC [64] LOG:  checkpoint complete: wrote 724 buffers (4.4%); 0 WAL file(s) added, 0 removed, 1 recycled; write=72.432 s, sync=0.012 s, total=72.459 s; sync files=52, longest=0.003 s, average=0.001 s; distance=17101 kB, estimate=17101 kB; lsn=0/2BF9E00, redo lsn=0/2BF9DC8

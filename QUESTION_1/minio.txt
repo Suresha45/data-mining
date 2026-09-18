@@ -1,0 +1,203 @@
+Layers (33)
+0
+
+LABEL maintainer="Red Hat, Inc."
+
+0 B
+
+1
+
+LABEL vendor="Red Hat, Inc."
+
+0 B
+
+2
+
+LABEL url="https://catalog.redhat.com/en/search?searchType=containers"
+
+0 B
+
+3
+
+LABEL com.redhat.component="ubi9-micro-container"
+
+0 B
+
+4
+
+LABEL name="ubi9/ubi-micro"
+
+0 B
+
+5
+
+LABEL version="9.6"
+
+0 B
+
+6
+
+LABEL distribution-scope="public"
+
+0 B
+
+7
+
+LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
+
+0 B
+
+8
+
+LABEL summary="ubi9 micro image"
+
+0 B
+
+9
+
+LABEL description="Very small image which doesn't install the package manager."
+
+0 B
+
+10
+
+LABEL io.k8s.description="Very small image which doesn't install the package manager."
+
+0 B
+
+11
+
+LABEL io.k8s.display-name="Red Hat Universal Base Image 9 Micro"
+
+0 B
+
+12
+
+LABEL io.openshift.expose-services=""
+
+0 B
+
+13
+
+COPY dir:8a1399bc3b82b627891a1e6d4f64754fb0ec8db16925fa54114d2bb6044e7c0a in /
+
+0 B
+
+14
+
+COPY file:b37d593713ee21ad52a4cd1424dc019a24f7966f85df0ac4b86d234302695328 in /etc/yum.repos.d/
+
+0 B
+
+15
+
+CMD /bin/sh
+
+0 B
+
+16
+
+COPY file:bc4e5ea7c9bb48901dc62121f094109ad85c0ae2bf4169dee234618cf6b9bd60 in /usr/share/buildinfo/content-sets.json
+
+0 B
+
+17
+
+LABEL "build-date"="2025-08-06T08:12:37" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="32d8e5209f029a1fb7235308ab32253bface1001" "release"="1754467928"
+
+25.34 MB
+
+18
+
+ARG RELEASE=RELEASE.2025-09-07T16-13-09Z
+
+0 B
+
+19
+
+LABEL name=MinIO vendor=MinIO Inc <dev@min.io> maintainer=MinIO Inc <dev@min.io> version=RELEASE.2025-09-07T16-13-09Z release=RELEASE.2025-09-07T16-13-09Z summary=MinIO is a High Performance Object Storage, API compatible with Amazon S3 cloud storage service. description=MinIO object storage is fundamentally different. Designed for performance and the S3 API, it is 100% open-source. MinIO is ideal for large, private cloud environments with stringent security requirements and delivers mission-critical availability across a diverse range of workloads.
+
+0 B
+
+20
+
+ENV MINIO_ACCESS_KEY_FILE=access_key MINIO_SECRET_KEY_FILE=secret_key MINIO_ROOT_USER_FILE=access_key MINIO_ROOT_PASSWORD_FILE=secret_key MINIO_KMS_SECRET_KEY_FILE=kms_master_key MINIO_UPDATE_MINISIGN_PUBKEY=RWTx5Zr1tiHQLwG9keckT0c45M3AGeHD6IvimQHpyRywVWGbP1aVSGav MINIO_CONFIG_ENV_FILE=config.env MC_CONFIG_DIR=/tmp/.mc
+
+0 B
+
+21
+
+RUN |1 RELEASE=RELEASE.2025-09-07T16-13-09Z /bin/sh -c chmod -R 777 /usr/bin # buildkit
+
+3.93 MB
+
+22
+
+COPY /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ # buildkit
+
+229.38 KB
+
+23
+
+COPY /go/bin/minio* /usr/bin/ # buildkit
+
+111.01 MB
+
+24
+
+COPY /go/bin/mc* /usr/bin/ # buildkit
+
+30.56 MB
+
+25
+
+COPY /go/bin/curl* /usr/bin/ # buildkit
+
+5.52 MB
+
+26
+
+COPY CREDITS /licenses/CREDITS # buildkit
+
+1.89 MB
+
+27
+
+COPY LICENSE /licenses/LICENSE # buildkit
+
+45.06 KB
+
+28
+
+COPY dockerscripts/docker-entrypoint.sh /usr/bin/docker-entrypoint.sh # buildkit
+
+16.38 KB
+
+29
+
+EXPOSE map[9000/tcp:{}]
+
+0 B
+
+30
+
+VOLUME [/data]
+
+0 B
+
+31
+
+ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
+
+0 B
+
+32
+
+CMD ["minio"]
+
+0 B
+
+Give feedback
+This image has not been analyzed
+You can use Docker Scout to analyze local images and list its vulnerabilities.
+Enable background indexing in Settings so your results are always ready.
