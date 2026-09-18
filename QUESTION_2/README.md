@@ -121,7 +121,9 @@ The current project files are organized as follows:
 .gitignore
 .gitignore.save
 labelled_pairs.csv
+notices/
 portal_profiles.md
+_truth/
 q2_corpus_profile.md
 q2_database_design.md
 q2_experiments.py
@@ -141,7 +143,7 @@ q2_results/
     similarity_survival.svg
 ```
 
-The original `notices/` corpus and `_truth/` directory are intentionally not included in the published `QUESTION_2` folder. `labelled_pairs.csv` and `portal_profiles.md` provide the retained evaluation context and portal interpretation used by the reports.
+The `notices/` corpus and `_truth/` directory are included here because this project snapshot is intended to preserve the complete local Q2 working set. Treat these files as exam/project data and do not redistribute them outside the authorized repository.
 
 ## Performance
 
