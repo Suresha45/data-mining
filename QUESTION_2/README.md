@@ -123,7 +123,6 @@ The current project files are organized as follows:
 labelled_pairs.csv
 portal_profiles.md
 q2_corpus_profile.md
-q2_database_benchmark.md
 q2_database_design.md
 q2_experiments.py
 q2_final_answers.md
@@ -167,7 +166,7 @@ Candidate distribution for the clean retrieval pass was mean **123.507**, p50 **
 - [Retrieval experiments](q2_retrieval_experiments.md)
 - [Skew mitigation](q2_skew_mitigation.md)
 - [Database design](q2_database_design.md)
-- [PostgreSQL benchmark](q2_database_benchmark.md)
+- [PostgreSQL benchmark](q2_results/q2_database_benchmark.md)
 - [Measured results summary](q2_results.md)
 - [Audited final answers](q2_final_answers_final.md)
 - [Raw experiment results](q2_results/raw_results.json)
