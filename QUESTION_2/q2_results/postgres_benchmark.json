@@ -1,0 +1,39 @@
+{
+  "container": "data-postgres-1",
+  "postgres_version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "schema": "q2",
+  "rows_loaded": 95467,
+  "distinct_tokens": 11509,
+  "probe_token": "aurangabad name",
+  "indexed": {
+    "access_path": "Index Scan",
+    "index_name": "q2_token_index_token_idx",
+    "relation": "token_index",
+    "plan_rows": 70,
+    "actual_rows_returned": 60,
+    "rows_removed_by_filter": 0,
+    "loops": 1,
+    "execution_ms": 0.038,
+    "shared_hit_blocks": 1,
+    "shared_read_blocks": 2
+  },
+  "sequential": {
+    "access_path": "Seq Scan",
+    "index_name": null,
+    "relation": "token_index",
+    "plan_rows": 70,
+    "actual_rows_returned": 60,
+    "rows_removed_by_filter": 95407,
+    "loops": 1,
+    "execution_ms": 3.146,
+    "shared_hit_blocks": 688,
+    "shared_read_blocks": 0
+  },
+  "index_ddl": "CREATE INDEX q2_token_index_token_idx ON q2.token_index(token)",
+  "lookup_sql": "SELECT notice_id FROM q2.token_index WHERE token = $1",
+  "stable_id_check": {
+    "original": "OPP010018",
+    "after_new_copy": "OPP010018",
+    "passed": true
+  }
+}

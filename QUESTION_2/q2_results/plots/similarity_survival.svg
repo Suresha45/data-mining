@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" viewBox="0 0 700 420">
+<rect width="700" height="420" fill="white"/><line x1="40" y1="360" x2="660" y2="360" stroke="black"/><line x1="40" y1="60" x2="40" y2="360" stroke="black"/>
+<polyline points="133.0,360.0 164.0,360.0 195.0,351.9 226.0,360.0 257.0,352.6 288.0,352.6 319.0,340.5 350.0,256.2 381.0,100.0 412.0,60.0 443.0,60.0 474.0,60.0 505.0,60.0 536.0,60.0 567.0,60.0 598.0,60.0 629.0,60.0 660.0,60.0" fill="none" stroke="#1769aa" stroke-width="3"/><line x1="387.20000000000005" y1="60" x2="387.20000000000005" y2="360" stroke="#c62828" stroke-dasharray="6,4"/>
+<text x="250" y="25" font-size="18">Candidate survival by true similarity</text><text x="250" y="405" font-size="14">Exact clean similarity</text><text x="5" y="55" font-size="14">1.0</text><text x="8" y="365" font-size="14">0.0</text>
+</svg>
